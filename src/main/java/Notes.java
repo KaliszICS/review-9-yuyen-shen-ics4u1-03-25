@@ -2,33 +2,46 @@ import java.util.Scanner;
 
 class Notes {
 	public static void main(String[] args) {
-		//while loops
-
+		
 		int num;
+		num = 6;
+
+		//if statement
+
+		if (num < 10) {
+			System.out.println("run if");
+		}
+
+		//while loop
 		num = 0;
 
-		//ensure that it will become false
-		while (num < 10) {
-			System.out.println("Hello");
+		//always eventually becomes false
+		while (num < 10) { //if statement that repeats while it is still true
+			System.out.println("while loop runs");
 			System.out.println(num);
-			num = num + 1; //makes it eventually false
+			num++;
 		}
-		//for loops
+		//DO NOT MAKE YOUR LOOPS INFINITE
 
-		//for (intializiation step; condition; increment step)
-		for (int i = 0; i < 10; i++) { //runs 10 times
-			System.out.println("Hello");
+		//for loops - counted loops
+
+		//for (intialization step; conditional statement; increment step)\
+		// initialization step happens once at the first run of the loop
+		// condition is check every time at the beginning of each loop
+		// increment step is executed at the end of every loop
+		for (int i = 0; i < 10; i++) { //the variable is local - can only be used inside the for loop
+			System.out.println("for loop runs");
 			System.out.println(i);
 		}
 
-		//for loops are used when you know how many times you want to run a loop ahead of time
-		//while  loops are usually used when you have no idea how many times a loop will run.
+		//For loop - When you know how many times you want to loop - before the first loop
+		//While loop - When you don't know how many times you want to loop
 
-		// Counters and accumulators
-
-		//Counters
+		//Counters and accumulators
 
 		Scanner s = new Scanner(System.in);
+
+		//Counter
 
 		int num2 = -1;
 		int count = 0;
@@ -43,18 +56,18 @@ class Notes {
 
 		System.out.println(count);
 
-		//Accumulators
-
+		//Accumulator
 
 		num2 = -1;
 		int sum = 0;
 
 		while (num2 != 0) {
-			System.out.println("IN: ");
+			System.out.println("In: ");
 			num2 = s.nextInt();
 			sum += num2;
 		}
 
 		System.out.println(sum);
+		//Accumulator with multiplication - start at 1
 	}
 }
